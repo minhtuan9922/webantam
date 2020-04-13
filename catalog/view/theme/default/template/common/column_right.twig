@@ -1,0 +1,63 @@
+{% if modules %}
+<aside id="column-right" class="col-sm-3"> 
+	{% for module in modules %}
+    {{ module }}
+    {% endfor %} 
+	<div class="bg-left news">
+		<h3>Tin tức</h3>
+		<div class="bm">
+			{% if posts %}
+				<div class="bm-posts">
+					<div class="bm-grid bm-grid">
+						<div class="row">
+							{% for post in posts %}
+								{% if post.row %}
+									</div><div class="row">
+								{% endif %}
+								<div class="col-sm-{{post.col}}">
+									<div class="new-item-body">
+										<article class="post-layout post-grid">
+											<div class="post-thumb">
+												<div class="image">
+													<a href="{{post.post.href}}">
+														<img src="{{post.post.thumb}}" alt="{{post.post.image_alt}}" title="{{post.post.image_title}}" class="img-responsive"/>
+													</a>
+												</div>
+												<div class="post-thumb-heading">
+													<h4 class="title"><a href="{{post.post.href}}">{{post.post.title}}</a></h4>
+													<div class="short-description">
+														{% if post.post.setting.post_thumb.author_display %}
+														<span class="author"><i class="fa fa-user"></i> {{post.post.author}}</span>
+														{% endif %}
+														<br>
+														{% if post.post.setting.post_thumb.date_display %}
+														<span class="date-published"><i class="fa fa-clock-o"></i> {{post.post.date_published}}</span>
+														{% endif %}
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if not posts %}
+				<p class="bm-empty">{{text_empty}}</p>
+				<div class="buttons">
+					<div class="pull-right"><a href="{{continue}}" class="btn btn-primary">{{button_continue}}</a></div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+	<div class="bg-left news p-15">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{ video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+	</div>
+	<div class="fb-page" style="margin-bottom: 20px;" data-href="https://www.facebook.com/QU%E1%BA%A2NG-C%C3%81O-TI%E1%BB%80N-GIANG-1387204894936868/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/QU%E1%BA%A2NG-C%C3%81O-TI%E1%BB%80N-GIANG-1387204894936868/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/QU%E1%BA%A2NG-C%C3%81O-TI%E1%BB%80N-GIANG-1387204894936868/">QUẢNG CÁO TIỀN GIANG</a></blockquote></div>
+</aside>
+{% endif %} 

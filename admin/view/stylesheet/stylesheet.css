@@ -78,6 +78,11 @@ a:hover, a:focus {
 	width: 235px;
 	display: none;
 }
+#header .navbar-header img {
+	width: 100%;
+	max-width: 190px;
+	max-height: 40px;
+}
 #header .navbar-brand {
 	margin-left: 8px;
 }

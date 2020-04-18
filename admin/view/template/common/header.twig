@@ -35,7 +35,7 @@
 <div id="container">
 <header id="header" class="navbar navbar-static-top">
     <div class="container-fluid">
-        <div id="header-logo" class="navbar-header"><a href="{{ home }}" class="navbar-brand"><img src="view/image/logo.png" alt="{{ heading_title }}" title="{{ heading_title }}" /></a></div>
+        <div id="header-logo" class="navbar-header"><a href="{{ home }}" class="navbar-brand"><img src="{{ logo ? logo : 'view/image/logo.png'}}" alt="{{ heading_title }}" title="{{ heading_title }}" /></a></div>
         <a href="#" id="button-menu" class="hidden-md hidden-lg"><span class="fa fa-bars"></span></a>{% if logged %}
         <ul class="nav navbar-nav navbar-right">
 			<li><a href="{{ contact }}"><i class="fa fa-bell-o"></i> <span class="hidden-xs hidden-sm hidden-md">Thông báo</span><span style="color: red"> {{ total_contact }}</span></a></li>

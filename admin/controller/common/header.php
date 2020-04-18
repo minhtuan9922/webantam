@@ -76,6 +76,12 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
+
+		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
+			$data['logo'] = HTTPS_CATALOG . 'image/' . $this->config->get('config_logo');
+		} else {
+			$data['logo'] = '';
+		}
 		
 		$this->load->model('contact/contact');
 		$data['total_contact'] = $this->model_contact_contact->countStatusContact(0);

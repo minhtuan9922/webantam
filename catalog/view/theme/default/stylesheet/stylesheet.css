@@ -545,7 +545,7 @@ footer h5 {
 	border: 1px solid #DDDDDD;
 	color: #FFFFFF;
 	padding: 8px 12px;
-	background: #3bb3c3
+	background: #0070b8
 }
 .list-group a.active, .list-group a.active:hover, .list-group a:hover {
 	color: #444444;
@@ -860,7 +860,7 @@ h2.price {
 	padding-top: 20px;
 }
 .bg-left {
-	background-color: #3bb3c3;
+	background-color: #0070b8;
 }
 .product-hot {
 	border: 1px solid #dddddd;
@@ -927,7 +927,7 @@ h2.price {
 	color: #000000;
 }
 .contact-home {
-	background-color: #3bb3c3;
+	background-color: #0070b8;
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
 	margin-bottom: 20px;
@@ -974,7 +974,7 @@ footer .contact-item span {
 .title-product {
 	height: 40px;
 	width: 100%;
-	background-color: #029141;
+	background-color: #0070b8;
 	border-top-right-radius: 40px;
 	display: block;
 	margin-bottom: 20px;

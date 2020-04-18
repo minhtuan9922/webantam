@@ -16,7 +16,7 @@
             {{ content_top }}
             {% for category in categories %}
             <div class="title-product">
-                <h3>{{ category.name }}</h3>
+                <a href="{{ href }}"><h3>{{ category.name }}</h3></a>
             </div>	
             <div class="row"> 
                 {% for product in category.products %}
